@@ -47,13 +47,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+
   .carousel{
     width:100%;
     height:400px;
+    img{
+      width:100%;
+      height:400px;
+    }
   }
-  .carousel img{
-    width:100%;
-    height:400px;
-  }
+
 </style>
