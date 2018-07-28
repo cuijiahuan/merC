@@ -1,7 +1,9 @@
 <template>
   <div class="myHeader">
-    <img src="../assets/panda.png" width="80px" height="80px">
-    <span>Small Store</span>
+    <div class="header">
+      <div class="logo"><img src="../assets/logo.png"></div>
+      <div class="date">{{ currentMonth }} 月 {{ currentDate }} 日</div>
+    </div>
   </div>
 </template>
 
@@ -10,28 +12,30 @@ export default {
   name: 'myHeader',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: ''
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
   .myHeader{
-    width:100%;
-    height:80px;
-    background-color:#ccc;
-  }
-  .myHeader img{
-    border-radius:50%;
-    vertical-align:middle;
-    margin-right:20px;
-  }
-  .myHeader span{
-    display:inline-block;
-    vertical-align:middle;
-    font-size:35px;
-    color:#fff;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    .header{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .logo{
+        width: 75px;
+        height: 75px;
+      }
+      .date{
+        color:#aaa;
+        line-height: 75px;
+        font-size: 25px;
+      }
+    }
   }
 </style>

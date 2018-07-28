@@ -1,20 +1,20 @@
 <template>
   <div class="home">
     <my-header></my-header>
-    <carousel></carousel>
-    <activity></activity>
-    <recommend></recommend>
+    <content></content>
   </div>
 </template>
 <script>
 import axios from 'axios'
 import MyHeader from "@/components/myHeader";
-import Carousel from "@/components/carousel";
-import Activity from "@/components/activity";
-import Recommend from "@/components/recommend";
+import Content from '@/components/content';
+// import Carousel from "@/components/carousel";
+// import Activity from "@/components/activity";
+// import Recommend from "@/components/recommend";
+// import Calendar from "@/components/calendar";
 export default {
     name:"home",
-    components: {Recommend, Activity, Carousel, MyHeader},
+    components: { MyHeader, Content },
     data() {
       return {
         msg:"hello vue"
