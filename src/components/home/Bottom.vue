@@ -33,9 +33,6 @@
       home: function(){
         this.$router.push({
           path: '/',
-          query:{
-            id: 233
-          }
         })
       },
       find: function(){

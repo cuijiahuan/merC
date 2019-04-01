@@ -1,11 +1,18 @@
 {
-  "code": 200,
-  "msg": "",
-  "swiper": [
-    "http://thyrsi.com/t6/633/1544942234x2890149637.jpg",
-    "http://thyrsi.com/t6/634/1544950288x2890149566.png",
-    "http://thyrsi.com/t6/634/1544954352x2728278865.png",
-    "http://thyrsi.com/t6/634/1544954457x2728278865.jpg",
-    "http://thyrsi.com/t6/634/1544954483x2728278865.jpg"
+  "homeContent": [
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192059.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192112.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192118.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192059.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192112.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192118.jpg?raw=true"
+  ],
+  "findCarousel": [
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192059.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192112.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192118.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192059.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192112.jpg?raw=true",
+    "https://github.com/cuijiahuan/personalPicture/blob/master/20190326192118.jpg?raw=true"
   ]
 }

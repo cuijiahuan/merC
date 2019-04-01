@@ -1,24 +1,17 @@
 <template>
   <div class="carousel">
     <swiper :options="swiperOption" ref="mySwiper">
-      <swiper-slide><img src="../../assets/c1.jpg"></swiper-slide>
-      <swiper-slide><img src="../../assets/c2.jpg"></swiper-slide>
-      <swiper-slide><img src="../../assets/c3.jpg"></swiper-slide>
-      <swiper-slide><img src="../../assets/c4.jpg"></swiper-slide>
-      <swiper-slide><img src="../../assets/c5.jpg"></swiper-slide>
-      <swiper-slide><img src="../../assets/c6.jpg"></swiper-slide>
-
-      <swiper-slide v-for="item in items" :key="item in items">
-        <img :src="item.img">
+      <swiper-slide v-for="(item, index) in items" :key="index">
+        <a href="#"><img :src="item"></a>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    <div class="div">{{ msg }}</div>
   </div>
 </template>
 <script>
   import "swiper/dist/css/swiper.css";
   import { swiper, swiperSlide } from "vue-awesome-swiper";
+  import axios from "axios"
   export default {
     name: 'carousel',
     components: {
@@ -27,7 +20,6 @@
     },
     data() {
       return {
-        msg:"",
         items:[],
         swiperOption: {
           pagination: {
@@ -42,6 +34,13 @@
       };
     },
     methods:{
+      getImageData() {
+        var that = this;
+        axios.get("/api/index.json").then(function(res){
+          // console.log(res.data.findCarousel);
+          that.items = res.data.findCarousel;
+        })
+      }
     },
     computed: {
       swiper() {
@@ -49,9 +48,8 @@
       }
     },
     mounted() {
-      // console.log("this is current swiper instance object",this.swiper);
+      this.getImageData();
       this.swiper.slideTo(3,1000,false);
-      //this.ajax()
     }
   };
 </script>

@@ -1,17 +1,16 @@
 <template>
   <div class="Content">
     <ul>
-      <li class="mid" v-for="item in items">
+      <li class="mid" v-for="(item, index) in items" :key="index">
         <img v-lazy="item" alt="">
-        <span>路人女主的养成方式</span>
+        <span>another one </span>
         <el-button type="primary" round>立即进入</el-button>
       </li>
     </ul>
   </div>
 </template>
 <script>
-
-  export default {
+export default {
     name:"Content",
     props: {
       items: {
@@ -24,21 +23,10 @@
       }
     },
     methods:{
-//      ajax获取数据方法
-//      getImage: function(){
-//        $.ajax({
-//          url:"//www.easy-mock.com/mock/5b76970cc88982363c8f989c/homeImg/getHomeImage",
-//          dataType: "jsonp",
-//          scriptCharset: "utf-8",
-//          success: function(res){
-//            console.log(res)
-//          }
-//        })
-//      }
 
     },
     mounted() {
-      //this.getImageData()
+
     }
   }
 </script>

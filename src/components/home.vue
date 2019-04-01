@@ -27,8 +27,8 @@ export default {
       getImageData() {
         var that = this;
         axios.get("/api/index.json").then(function(res){
-          console.log(res.data);
-          that.items = res.data.swiper;
+          // console.log(res.data.homeContent);
+          that.items = res.data.homeContent;
         })
       }
     }
